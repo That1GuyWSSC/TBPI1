@@ -115,12 +115,16 @@ void readfromfileinsertMobilidade(Mobilidade array[]){
 int menu(){
     int opcao;
     printf("\n");
-    printf("**********************MENU******************************\n");
-    printf("*\t1- Ler o ficheiro de pedidos                   *\n");
-    printf("*\t2- Ler o ficheiro de meio de mobilidade         *\n");
-    printf("*\t3- Inserir novo Pedido                          *\n");
-    printf("*\t4- Remover um Pedido                            *\n");
-    printf("*\t7- Listar todos os Pedido                       *\n");
+    printf("**********************MENU***********************************\n");
+    printf("*\t1- Ler o ficheiro de pedidos                         *\n");
+    printf("*\t2- Ler o ficheiro de meio de mobilidade              *\n");
+    printf("*\t3- Inserir um novo meio de mobilidade                *\n");
+    printf("*\t4- Remover um pedido de mobilidade                   *\n");
+    printf("*\t5- Inserir novo Pedido                               *\n");
+    printf("*\t6- Remover um Pedido                                 *\n");
+    printf("*\t7- Listar todos os meios de mobilidades              *\n");
+    printf("*\t8- Listar todos os pedidos                           *\n");
+    printf("*\t9- Calculo do custo de um pedido a partir de um número de ordem; *\n");
     printf("********************************************************\n");
     printf("Escreva o numero da opcao desejada.\n");
     scanf("%d", &opcao);
@@ -130,7 +134,7 @@ return (opcao);
 
 void printartudoPedido(Pedido array[]){
 
-    readfromfileinsertPedido(array);
+    //readfromfileinsertPedido(array);
 
     for (int i = 0; array[i].ordem != -1; i++) {
         printf("********************\n");

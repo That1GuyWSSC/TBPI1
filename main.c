@@ -36,7 +36,7 @@ char codigo[50];
     case 2 : readfromfileinsertMobilidade(array2);
                 break;
              
-    case 3 :  for (i=0; array[i].ordem != -1; i++);
+    case 5 :  for (i=0; array[i].ordem != -1; i++);
             printf("Insira o numero do pedido\n");
             scanf("%d", &ordem);
             printf("Insira o nif\n");
@@ -47,10 +47,11 @@ char codigo[50];
             scanf("%d", &tempo);
             printf("Insira a distancia\n");
             scanf("%d", &distancia);
+            printf("%d %d %s %d %d index : %d ", ordem, nif, codigo, tempo,distancia, i);
             insertPedido(array,i, ordem, nif, codigo, tempo, distancia);
             break;
     case 4 : 
-    case 7 : insertPedido(array,i, ordem, nif, codigo, tempo, distancia); 
+    case 8 : insertPedido(array,i, ordem, nif, codigo, tempo, distancia); 
             printartudoPedido(array);
             break;
 
