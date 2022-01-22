@@ -7,13 +7,17 @@ extern void printartudome(ME array[]);
 extern void readfromfileinsertmu(MU array[]);
 
 */
-
+#define TAMANHOARR 100
+#define TAMANHOSTR 20
 
 // new .h
 extern int insertPedido(Pedido array[],int index, int ordem, int nif, char *codigo, int tempo, int distancia);
 extern void readfromfileinsertPedido(Pedido array[]);
-extern void insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia);
+extern int insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia);
 extern void printarrayMobilidade(Mobilidade array[], int i);
 extern void readfromfileinsertMobilidade(Mobilidade array[]);
 extern int menu();
 extern void printartudoPedido(Pedido array[]);
+extern void printartudoMob(Mobilidade array[]);
+extern void storeinfileped(Pedido array[]);
+extern void storeinfilemob(Mobilidade array[]);

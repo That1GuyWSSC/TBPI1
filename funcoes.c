@@ -14,15 +14,17 @@ int insertPedido(Pedido array[],int index, int ordem, int nif, char *codigo, int
     }
 */
 
-
+    if (index < TAMANHOARR) {
+        
+   
     array[index].ordem = ordem;
     array[index].nif = nif;
     array[index].tempo= tempo;
     array[index].distancia= distancia;
     strcpy(array[index].codigoped, codigo);
-
     return 1;
-
+    }
+    return 0;
 }    
 
 
@@ -35,7 +37,7 @@ void readfromfileinsertPedido(Pedido array[]){
     FILE *input_file;
     int ordem , nif , tempo , distancia;
     int c = 0;
-    char codigo[100];
+    char codigo[TAMANHOSTR];
 
     input_file = fopen("pedidos.txt", "rt");
     
@@ -69,23 +71,41 @@ void readfromfileinsertPedido(Pedido array[]){
 }
 */
 
-void insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia)
+int insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia)
 {
-    strcpy(array[index].codigomobi, codigo);
+    if (index < TAMANHOARR) {
+        strcpy(array[index].codigomobi, codigo);
     strcpy(array[index].tipo, tipo);
     array[index].custo = custo;
     array[index].autonomia = autonomia;
-}
+    return 1;
+    }
+    return 0;
+    }
 
 void printarrayMobilidade(Mobilidade array[], int i)
 {
     printf("%s %s %.2f %d \n", array[i].codigomobi,array[i].tipo,array[i].custo,array[i].autonomia);
 }
 
+void printartudoMob(Mobilidade array[]){
+
+    for (int i=0; array[i].custo != -1; i++) {
+        printf("********************\n");
+        printf("O custo da Mobilidade: %s \n ", array[i].codigomobi);
+        printf("O tipo da Mobilidade %s \n", array[i].tipo);
+        printf("O custo da Mobilidade: %d \n", array[i].custo);
+        printf("A autonomia da Mobilidade: %d \n", array[i].autonomia);
+        printf("********************\n");
+        printf("\n");
+    }
+
+}
+
 void readfromfileinsertMobilidade(Mobilidade array[]){
 
-    char codigo[100];
-    char tipo[100];
+    char codigo[TAMANHOSTR];
+    char tipo[TAMANHOSTR];
     float custo;
     int autonomia;   
     int index = 0;
@@ -125,6 +145,8 @@ int menu(){
     printf("*\t7- Listar todos os meios de mobilidades              *\n");
     printf("*\t8- Listar todos os pedidos                           *\n");
     printf("*\t9- Calculo do custo de um pedido a partir de um número de ordem; *\n");
+    printf("*\t12- Armazenar os pedidos em file                     *\n");
+    printf("*\t13- Armazenar as mobilidades em file                 *\n");
     printf("********************************************************\n");
     printf("Escreva o numero da opcao desejada.\n");
     scanf("%d", &opcao);
@@ -147,4 +169,46 @@ void printartudoPedido(Pedido array[]){
         printf("\n");
     }
 
+}
+
+void storeinfileped(Pedido array[]){
+    int i = 0;
+    FILE *input_file;
+    input_file = fopen("pedidosafter.txt", "wt");
+    if (input_file == NULL) {
+        printf("Ocorreu um erro na abertura do ficheiro");
+        exit(1);
+    }
+    else {
+        while (feof(input_file)) {
+            fprintf(input_file, "%d ", array[i].ordem);
+            fprintf(input_file, "%d ", array[i].nif);
+            fprintf(input_file, "%s ", array[i].codigoped);
+            fprintf(input_file, "%d ", array[i].tempo);
+            fprintf(input_file, "%d\n", array[i].distancia);
+            i++;    
+        }
+    }
+    fclose(input_file);
+}
+
+void storeinfilemob(Mobilidade array[]){
+
+    int i=0;
+    FILE *input_file;
+    input_file = fopen("mobilidadeafter.txt", "wt");
+    if (input_file == NULL) {
+        printf("Ocorreu um erro na abertura do ficheiro");
+        exit(1);
+    }
+    else {
+        while (feof(input_file)) {
+            fprintf(input_file, "%s ", array[i].codigomobi);
+            fprintf(input_file, "%s ", array[i].tipo);
+            fprintf(input_file, "%f ", array[i].custo);
+            fprintf(input_file, "%d\n", array[i].autonomia);
+            i++;
+        }
+    }
+    fclose(input_file);
 }
