@@ -1,0 +1,112 @@
+\begin{theindex}
+
+  \item {calcusto}
+    \subitem {funcoes.c}, \hyperpage{10}
+    \subitem {funcoes.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {deletemob}
+    \subitem {funcoes.c}, \hyperpage{11}
+    \subitem {funcoes.h}, \hyperpage{17}
+  \item {deleteped}
+    \subitem {funcoes.c}, \hyperpage{11}
+    \subitem {funcoes.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {funcoes.c}, \hyperpage{9}
+    \subitem {calcusto}, \hyperpage{10}
+    \subitem {deletemob}, \hyperpage{11}
+    \subitem {deleteped}, \hyperpage{11}
+    \subitem {insertMobilidade}, \hyperpage{11}
+    \subitem {insertPedido}, \hyperpage{12}
+    \subitem {menu}, \hyperpage{12}
+    \subitem {preencherMob}, \hyperpage{13}
+    \subitem {preencherPed}, \hyperpage{13}
+    \subitem {printarrayMobilidade}, \hyperpage{13}
+    \subitem {printarrayped}, \hyperpage{13}
+    \subitem {printartudoMob}, \hyperpage{14}
+    \subitem {printartudoPedido}, \hyperpage{14}
+    \subitem {readfromfileinsertMobilidade}, \hyperpage{14}
+    \subitem {readfromfileinsertPedido}, \hyperpage{15}
+    \subitem {storeinfilemob}, \hyperpage{15}
+    \subitem {storeinfileped}, \hyperpage{15}
+  \item {funcoes.h}, \hyperpage{16}
+    \subitem {calcusto}, \hyperpage{17}
+    \subitem {deletemob}, \hyperpage{17}
+    \subitem {deleteped}, \hyperpage{18}
+    \subitem {insertMobilidade}, \hyperpage{18}
+    \subitem {insertPedido}, \hyperpage{18}
+    \subitem {menu}, \hyperpage{19}
+    \subitem {preencherMob}, \hyperpage{19}
+    \subitem {preencherPed}, \hyperpage{20}
+    \subitem {printarrayMobilidade}, \hyperpage{20}
+    \subitem {printartudoMob}, \hyperpage{20}
+    \subitem {printartudoPedido}, \hyperpage{20}
+    \subitem {readfromfileinsertMobilidade}, \hyperpage{21}
+    \subitem {readfromfileinsertPedido}, \hyperpage{21}
+    \subitem {storeinfilemob}, \hyperpage{21}
+    \subitem {storeinfileped}, \hyperpage{22}
+
+  \indexspace
+
+  \item {insertMobilidade}
+    \subitem {funcoes.c}, \hyperpage{11}
+    \subitem {funcoes.h}, \hyperpage{18}
+  \item {insertPedido}
+    \subitem {funcoes.c}, \hyperpage{12}
+    \subitem {funcoes.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{23}
+  \item {main.c}, \hyperpage{22}
+    \subitem {main}, \hyperpage{23}
+  \item {menu}
+    \subitem {funcoes.c}, \hyperpage{12}
+    \subitem {funcoes.h}, \hyperpage{19}
+  \item {Mobilidade}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Pedido}, \hyperpage{7}
+  \item {preencherMob}
+    \subitem {funcoes.c}, \hyperpage{13}
+    \subitem {funcoes.h}, \hyperpage{19}
+  \item {preencherPed}
+    \subitem {funcoes.c}, \hyperpage{13}
+    \subitem {funcoes.h}, \hyperpage{20}
+  \item {printarrayMobilidade}
+    \subitem {funcoes.c}, \hyperpage{13}
+    \subitem {funcoes.h}, \hyperpage{20}
+  \item {printarrayped}
+    \subitem {funcoes.c}, \hyperpage{13}
+  \item {printartudoMob}
+    \subitem {funcoes.c}, \hyperpage{14}
+    \subitem {funcoes.h}, \hyperpage{20}
+  \item {printartudoPedido}
+    \subitem {funcoes.c}, \hyperpage{14}
+    \subitem {funcoes.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {readfromfileinsertMobilidade}
+    \subitem {funcoes.c}, \hyperpage{14}
+    \subitem {funcoes.h}, \hyperpage{21}
+  \item {readfromfileinsertPedido}
+    \subitem {funcoes.c}, \hyperpage{15}
+    \subitem {funcoes.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {storeinfilemob}
+    \subitem {funcoes.c}, \hyperpage{15}
+    \subitem {funcoes.h}, \hyperpage{21}
+  \item {storeinfileped}
+    \subitem {funcoes.c}, \hyperpage{15}
+    \subitem {funcoes.h}, \hyperpage{22}
+  \item {structs.h}, \hyperpage{23}
+
+\end{theindex}

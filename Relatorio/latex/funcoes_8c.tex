@@ -1,0 +1,349 @@
+\hypertarget{funcoes_8c}{}\doxysection{funcoes.\+c File Reference}
+\label{funcoes_8c}\index{funcoes.c@{funcoes.c}}
+
+
+Ficheiro que contem as funcoes do programa.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structs.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}funcoes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{funcoes_8c_a41967d5f11a7ebfd5d3b3007fb0bd7fb}{insert\+Pedido}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]}, int index, int ordem, int nif, char $\ast$codigo, int tempo, int distancia)
+\begin{DoxyCompactList}\small\item\em Funcao que passa por argumentos todos os elementos necessarios para inserir um novo elemento no array de structs de \mbox{\hyperlink{struct_pedido}{Pedido}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a5fbb45effa333ff2c666ecc7bb83d0cb}{printarrayped}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]}, int i)
+\begin{DoxyCompactList}\small\item\em funcao que escreve na consola um elemento do array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a3f259cfc1faa5dcc190f4f6a6c614e9d}{readfromfileinsert\+Pedido}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que le os dados do ficheiro \char`\"{}pedidos\char`\"{} e insere os valores obtidos num array dos registos e escreve na consola para confirmar os valores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a1dbf29d3d84f05568ff129f542962d5c}{insert\+Mobilidade}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]}, int index, char $\ast$codigo, char $\ast$tipo, float custo, int autonomia)
+\begin{DoxyCompactList}\small\item\em Funcao que pode vir a ser utilizada para verificar a existencia de um elemento do array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_ae92df6e5c1434642ea6bfa2b07e0c938}{printarray\+Mobilidade}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]}, int i)
+\begin{DoxyCompactList}\small\item\em Funcao que escreve na consola um elemento de um certo index do array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a1ea07b63374a2e5801924eac4937a66e}{printartudo\+Mob}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que escreve na consola todos os elementos do array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a2a7dc4b8da2fea83d315e45c0eaa8a91}{readfromfileinsert\+Mobilidade}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que le os dados do ficheiro de mobilidades e insere os dados num array de registos da struct, escreve tambem na consola para verificar se os elementos passados foram os corretos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_ae83fcdbeb2b6757fc741ae953b633ee1}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Funcao utilizada para escrever na consola o nosso menu (apresenta todas as opcoes disponiveis para o utilizador usar) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_aba8e39dfc9f4f4e8a886245d4d28f1c4}{printartudo\+Pedido}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que escreve na consola todos os elementos do array de registos de uma struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a76285b0fad7d8281298008a5358a25b9}{storeinfileped}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao usada no final do programa para escrever todos os elementos do array de registo de pedidos, para um outro ficheiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_ad1c02b892280452cf64eb19f44951031}{storeinfilemob}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao utilizada no final do programa para escrever num ficheiro todos os elementos do array de registos da struct especifica, para um outro ficheiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a2c4a8d23102ac6410cfe467f37ba7a2c}{deletemob}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que apaga elementos do array utilizando o codigo dos elementos como parametro para apagar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a9b36a5f5760b6d9a8944024000016900}{deleteped}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que apaga todos os elementos do array de registo, se o codigo fornececido for igual a um dos elementos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{funcoes_8c_aff4bc17c602603d120756f52e18ebb96}\label{funcoes_8c_aff4bc17c602603d120756f52e18ebb96}} 
+void {\bfseries clearscreen} ()
+\begin{DoxyCompactList}\small\item\em Funcao utilizada para a limpeza do ecra, para melhor a visibilidade do menu Funciona so em Linux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a574de06aea00e72c916a5de322d3bd64}{preencher\+Ped}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em funcao que preenche o array com -\/1 nos numeros e espacos nos chars \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a10f3eca110f36f6f37f291692e00e97f}{preencher\+Mob}} (\mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em funcao que preenche o array com -\/1 nos numeros e espacos nos chars \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a25de4dba5681f5dea50e0d048b8fb0f3}{calcusto}} (\mbox{\hyperlink{struct_pedido}{Pedido}} array\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} array2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcao que utiliza o numero de ordem inserido para calcular o custo associado a essa mobilidade eletrica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ficheiro que contem as funcoes do programa. 
+
+\begin{DoxyAuthor}{Author}
+Joao Machado 
+
+Diogo Espirito Santo 
+
+Tiago Fernandes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/01-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{funcoes_8c_a25de4dba5681f5dea50e0d048b8fb0f3}\label{funcoes_8c_a25de4dba5681f5dea50e0d048b8fb0f3}} 
+\index{funcoes.c@{funcoes.c}!calcusto@{calcusto}}
+\index{calcusto@{calcusto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{calcusto()}{calcusto()}}
+{\footnotesize\ttfamily void calcusto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array2\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que utiliza o numero de ordem inserido para calcular o custo associado a essa mobilidade eletrica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de Pedidos ~\newline
+ \\
+\hline
+{\em array2} & array da struct de Mobiliadades \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a2c4a8d23102ac6410cfe467f37ba7a2c}\label{funcoes_8c_a2c4a8d23102ac6410cfe467f37ba7a2c}} 
+\index{funcoes.c@{funcoes.c}!deletemob@{deletemob}}
+\index{deletemob@{deletemob}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{deletemob()}{deletemob()}}
+{\footnotesize\ttfamily void deletemob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que apaga elementos do array utilizando o codigo dos elementos como parametro para apagar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a9b36a5f5760b6d9a8944024000016900}\label{funcoes_8c_a9b36a5f5760b6d9a8944024000016900}} 
+\index{funcoes.c@{funcoes.c}!deleteped@{deleteped}}
+\index{deleteped@{deleteped}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{deleteped()}{deleteped()}}
+{\footnotesize\ttfamily void deleteped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que apaga todos os elementos do array de registo, se o codigo fornececido for igual a um dos elementos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de \mbox{\hyperlink{struct_pedido}{Pedido}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a1dbf29d3d84f05568ff129f542962d5c}\label{funcoes_8c_a1dbf29d3d84f05568ff129f542962d5c}} 
+\index{funcoes.c@{funcoes.c}!insertMobilidade@{insertMobilidade}}
+\index{insertMobilidade@{insertMobilidade}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{insertMobilidade()}{insertMobilidade()}}
+{\footnotesize\ttfamily int insert\+Mobilidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{char $\ast$}]{codigo,  }\item[{char $\ast$}]{tipo,  }\item[{float}]{custo,  }\item[{int}]{autonomia }\end{DoxyParamCaption})}
+
+
+
+Funcao que pode vir a ser utilizada para verificar a existencia de um elemento do array. 
+
+Funcao que passa por argumentos todos os valores necessarios para preencher o elemento da struct da mobilidade
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct da \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+{\em index} & \\
+\hline
+{\em codigo} & \\
+\hline
+{\em tipo} & \\
+\hline
+{\em custo} & \\
+\hline
+{\em autonomia} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funcoes_8c_a41967d5f11a7ebfd5d3b3007fb0bd7fb}\label{funcoes_8c_a41967d5f11a7ebfd5d3b3007fb0bd7fb}} 
+\index{funcoes.c@{funcoes.c}!insertPedido@{insertPedido}}
+\index{insertPedido@{insertPedido}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{insertPedido()}{insertPedido()}}
+{\footnotesize\ttfamily int insert\+Pedido (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{int}]{ordem,  }\item[{int}]{nif,  }\item[{char $\ast$}]{codigo,  }\item[{int}]{tempo,  }\item[{int}]{distancia }\end{DoxyParamCaption})}
+
+
+
+Funcao que passa por argumentos todos os elementos necessarios para inserir um novo elemento no array de structs de \mbox{\hyperlink{struct_pedido}{Pedido}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct \mbox{\hyperlink{struct_pedido}{Pedido}} \\
+\hline
+{\em index} & index do array \\
+\hline
+{\em ordem} & \\
+\hline
+{\em nif} & \\
+\hline
+{\em codigo} & \\
+\hline
+{\em tempo} & \\
+\hline
+{\em distancia} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funcoes_8c_ae83fcdbeb2b6757fc741ae953b633ee1}\label{funcoes_8c_ae83fcdbeb2b6757fc741ae953b633ee1}} 
+\index{funcoes.c@{funcoes.c}!menu@{menu}}
+\index{menu@{menu}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily int menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcao utilizada para escrever na consola o nosso menu (apresenta todas as opcoes disponiveis para o utilizador usar) 
+
+\begin{DoxyReturn}{Returns}
+int \texorpdfstring{$<$}{<}-\/ a opcao inserida pelo o utilizador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funcoes_8c_a10f3eca110f36f6f37f291692e00e97f}\label{funcoes_8c_a10f3eca110f36f6f37f291692e00e97f}} 
+\index{funcoes.c@{funcoes.c}!preencherMob@{preencherMob}}
+\index{preencherMob@{preencherMob}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{preencherMob()}{preencherMob()}}
+{\footnotesize\ttfamily void preencher\+Mob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funcao que preenche o array com -\/1 nos numeros e espacos nos chars 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array de mobilidade \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a574de06aea00e72c916a5de322d3bd64}\label{funcoes_8c_a574de06aea00e72c916a5de322d3bd64}} 
+\index{funcoes.c@{funcoes.c}!preencherPed@{preencherPed}}
+\index{preencherPed@{preencherPed}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{preencherPed()}{preencherPed()}}
+{\footnotesize\ttfamily void preencher\+Ped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funcao que preenche o array com -\/1 nos numeros e espacos nos chars 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array de pedidos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_ae92df6e5c1434642ea6bfa2b07e0c938}\label{funcoes_8c_ae92df6e5c1434642ea6bfa2b07e0c938}} 
+\index{funcoes.c@{funcoes.c}!printarrayMobilidade@{printarrayMobilidade}}
+\index{printarrayMobilidade@{printarrayMobilidade}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{printarrayMobilidade()}{printarrayMobilidade()}}
+{\footnotesize\ttfamily void printarray\+Mobilidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Funcao que escreve na consola um elemento de um certo index do array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a5fbb45effa333ff2c666ecc7bb83d0cb}\label{funcoes_8c_a5fbb45effa333ff2c666ecc7bb83d0cb}} 
+\index{funcoes.c@{funcoes.c}!printarrayped@{printarrayped}}
+\index{printarrayped@{printarrayped}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{printarrayped()}{printarrayped()}}
+{\footnotesize\ttfamily void printarrayped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+funcao que escreve na consola um elemento do array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct do \mbox{\hyperlink{struct_pedido}{Pedido}} \\
+\hline
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a1ea07b63374a2e5801924eac4937a66e}\label{funcoes_8c_a1ea07b63374a2e5801924eac4937a66e}} 
+\index{funcoes.c@{funcoes.c}!printartudoMob@{printartudoMob}}
+\index{printartudoMob@{printartudoMob}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{printartudoMob()}{printartudoMob()}}
+{\footnotesize\ttfamily void printartudo\+Mob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que escreve na consola todos os elementos do array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_aba8e39dfc9f4f4e8a886245d4d28f1c4}\label{funcoes_8c_aba8e39dfc9f4f4e8a886245d4d28f1c4}} 
+\index{funcoes.c@{funcoes.c}!printartudoPedido@{printartudoPedido}}
+\index{printartudoPedido@{printartudoPedido}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{printartudoPedido()}{printartudoPedido()}}
+{\footnotesize\ttfamily void printartudo\+Pedido (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que escreve na consola todos os elementos do array de registos de uma struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct dos Pedidos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a2a7dc4b8da2fea83d315e45c0eaa8a91}\label{funcoes_8c_a2a7dc4b8da2fea83d315e45c0eaa8a91}} 
+\index{funcoes.c@{funcoes.c}!readfromfileinsertMobilidade@{readfromfileinsertMobilidade}}
+\index{readfromfileinsertMobilidade@{readfromfileinsertMobilidade}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{readfromfileinsertMobilidade()}{readfromfileinsertMobilidade()}}
+{\footnotesize\ttfamily void readfromfileinsert\+Mobilidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que le os dados do ficheiro de mobilidades e insere os dados num array de registos da struct, escreve tambem na consola para verificar se os elementos passados foram os corretos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct de \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a3f259cfc1faa5dcc190f4f6a6c614e9d}\label{funcoes_8c_a3f259cfc1faa5dcc190f4f6a6c614e9d}} 
+\index{funcoes.c@{funcoes.c}!readfromfileinsertPedido@{readfromfileinsertPedido}}
+\index{readfromfileinsertPedido@{readfromfileinsertPedido}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{readfromfileinsertPedido()}{readfromfileinsertPedido()}}
+{\footnotesize\ttfamily void readfromfileinsert\+Pedido (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao que le os dados do ficheiro \char`\"{}pedidos\char`\"{} e insere os valores obtidos num array dos registos e escreve na consola para confirmar os valores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct do \mbox{\hyperlink{struct_pedido}{Pedido}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_ad1c02b892280452cf64eb19f44951031}\label{funcoes_8c_ad1c02b892280452cf64eb19f44951031}} 
+\index{funcoes.c@{funcoes.c}!storeinfilemob@{storeinfilemob}}
+\index{storeinfilemob@{storeinfilemob}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{storeinfilemob()}{storeinfilemob()}}
+{\footnotesize\ttfamily void storeinfilemob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mobilidade}{Mobilidade}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao utilizada no final do programa para escrever num ficheiro todos os elementos do array de registos da struct especifica, para um outro ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & array da struct da \mbox{\hyperlink{struct_mobilidade}{Mobilidade}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a76285b0fad7d8281298008a5358a25b9}\label{funcoes_8c_a76285b0fad7d8281298008a5358a25b9}} 
+\index{funcoes.c@{funcoes.c}!storeinfileped@{storeinfileped}}
+\index{storeinfileped@{storeinfileped}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{storeinfileped()}{storeinfileped()}}
+{\footnotesize\ttfamily void storeinfileped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pedido}{Pedido}}}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcao usada no final do programa para escrever todos os elementos do array de registo de pedidos, para um outro ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & arrat da struct dos Pedidos \\
+\hline
+\end{DoxyParams}
