@@ -77,6 +77,8 @@ char tipo[TAMANHOSTR];
     case 8 : //insertPedido(array,i, ordem, nif, codigo, tempo, distancia); 
             printartudoPedido(array);
             break;
+    case 9 : calcusto(array, array2);
+            break;
     case 12 : storeinfileped(array);
             break;
     case 13: storeinfilemob(array2);

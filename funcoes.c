@@ -208,6 +208,7 @@ int menu(){
     printf("*\t6- Remover um Pedido                                 *\n");
     printf("*\t7- Listar todos os meios de mobilidades              *\n");
     printf("*\t8- Listar todos os pedidos                           *\n");
+    printf("*\t9- Cálculo do custo associado a um pedido de utilização a partir da indicação do seu número de ordem *\n");
     printf("*\t12- Armazenar os pedidos em file                     *\n");
     printf("*\t13- Armazenar as mobilidades em file                 *\n");
     printf("*\t14- Clear ao ecra                                    *\n");
@@ -378,4 +379,33 @@ void preencherMob(Mobilidade array[]){
         array[i].autonomia = -1;
         }
 
+}
+/**
+ * @brief Funcao que utiliza o numero de ordem inserido para calcular o custo associado a essa mobilidade eletrica
+ * 
+ * @param array array da struct de Pedidos  
+ * @param array2 array da struct de Mobiliadades
+ */
+void calcusto(Pedido array[], Mobilidade array2[]){
+    int ordem;
+    printf("Insira o numero de ordem pretendido: \n");
+    scanf("%d",&ordem);
+
+    int aux=0;
+    for (int i=0; array[i].ordem != -1; i++) {
+        if (array[i].ordem == ordem) {
+            for (int j=0; array2[j].custo != -1; j++) {
+             if (strcmp(array[i].codigoped, array2[j].codigomobi) == 0 ){
+             //printf("%s %s %.2f %d", array2[j].codigomobi, array2[j].tipo, array2[j].custo, array2[j].autonomia); teste
+             printf("O custo associado a numero de ordem inserido e de : %.2f", array2[j].custo);
+             aux=1;
+             //break;
+             }
+            }
+        }
+   if (aux==1) {
+    break;
+    
+    }   
+    }
 }

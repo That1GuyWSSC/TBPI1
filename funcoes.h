@@ -25,6 +25,7 @@ extern void clearscreen();
 extern void deleteped(Pedido array[]);
 extern void preencherPed(Pedido array[]);
 extern void preencherMob(Mobilidade array[]);
+extern void calcusto(Pedido array[], Mobilidade array2[]);
 extern int insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia);
 extern int insertPedido(Pedido array[],int index, int ordem, int nif, char *codigo, int tempo, int distancia);
 extern int menu();
