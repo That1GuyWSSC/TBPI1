@@ -49,7 +49,8 @@ char tipo[TAMANHOSTR];
     
             insertMobilidade(array2,i, codigo, tipo , custo, autonomia);
             break;
-    case 4 : 
+    case 4 : deletemob(array2);
+            break;
     case 5 :  for (i=0; array[i].ordem != -1; i++);
             printf("Insira o numero do pedido\n");
             scanf("%d", &ordem);
@@ -64,21 +65,23 @@ char tipo[TAMANHOSTR];
             printf("%d %d %s %d %d index : %d ", ordem, nif, codigo, tempo,distancia, i);
             insertPedido(array,i, ordem, nif, codigo, tempo, distancia);
             break;
-    case 6 :
-    case 7 :insertMobilidade(array2,i, codigo, tipo , custo, autonomia);
+    case 6 : deleteped(array);
+            break;
+    case 7 ://insertMobilidade(array2,i, codigo, tipo , custo, autonomia);
             printartudoMob(array2);
             break;
 
-    case 8 : insertPedido(array,i, ordem, nif, codigo, tempo, distancia); 
+    case 8 : //insertPedido(array,i, ordem, nif, codigo, tempo, distancia); 
             printartudoPedido(array);
             break;
-    case 12; stor
+    case 12 : storeinfileped(array);
             break;
-    case 13:
+    case 13: storeinfilemob(array2);
             break;
+    case 14: clearscreen();
 
     default:
-        printf("Tente outra vez");
+        printf("Ocorreu um erro.");
         break;
     }
 }while (opcao!=0);

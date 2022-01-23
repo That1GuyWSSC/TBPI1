@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include "structs.h"
 #include <string.h>
@@ -94,7 +95,7 @@ void printartudoMob(Mobilidade array[]){
         printf("********************\n");
         printf("O custo da Mobilidade: %s \n ", array[i].codigomobi);
         printf("O tipo da Mobilidade %s \n", array[i].tipo);
-        printf("O custo da Mobilidade: %d \n", array[i].custo);
+        printf("O custo da Mobilidade: %.2f \n", array[i].custo);
         printf("A autonomia da Mobilidade: %d \n", array[i].autonomia);
         printf("********************\n");
         printf("\n");
@@ -122,7 +123,7 @@ void readfromfileinsertMobilidade(Mobilidade array[]){
         while(!feof(input_file))
         {
             fscanf(input_file,"%s %s %f %d\n", codigo, tipo, &custo, &autonomia);
-            printf("%s %s %.2f %d \n", codigo, tipo , custo, autonomia);
+            //printf("%s %s %.2f %d \n", codigo, tipo , custo, autonomia);
             insertMobilidade(array, index, codigo, tipo, custo, autonomia);
             printarrayMobilidade(array, index);
             index++;
@@ -139,15 +140,15 @@ int menu(){
     printf("*\t1- Ler o ficheiro de pedidos                         *\n");
     printf("*\t2- Ler o ficheiro de meio de mobilidade              *\n");
     printf("*\t3- Inserir um novo meio de mobilidade                *\n");
-    printf("*\t4- Remover um pedido de mobilidade                   *\n");
+    printf("*\t4- Remover um meio de mobilidade                     *\n");
     printf("*\t5- Inserir novo Pedido                               *\n");
     printf("*\t6- Remover um Pedido                                 *\n");
     printf("*\t7- Listar todos os meios de mobilidades              *\n");
     printf("*\t8- Listar todos os pedidos                           *\n");
-    printf("*\t9- Calculo do custo de um pedido a partir de um número de ordem; *\n");
     printf("*\t12- Armazenar os pedidos em file                     *\n");
     printf("*\t13- Armazenar as mobilidades em file                 *\n");
-    printf("********************************************************\n");
+    printf("*\t14- Clear ao ecra                                    *\n");
+    printf("*************************************************************\n");
     printf("Escreva o numero da opcao desejada.\n");
     scanf("%d", &opcao);
 
@@ -172,7 +173,6 @@ void printartudoPedido(Pedido array[]){
 }
 
 void storeinfileped(Pedido array[]){
-    int i = 0;
     FILE *input_file;
     input_file = fopen("pedidosafter.txt", "wt");
     if (input_file == NULL) {
@@ -180,21 +180,21 @@ void storeinfileped(Pedido array[]){
         exit(1);
     }
     else {
-        while (feof(input_file)) {
+       {    for (int i=0; array[i].ordem != -1; i++) {
             fprintf(input_file, "%d ", array[i].ordem);
             fprintf(input_file, "%d ", array[i].nif);
             fprintf(input_file, "%s ", array[i].codigoped);
             fprintf(input_file, "%d ", array[i].tempo);
             fprintf(input_file, "%d\n", array[i].distancia);
-            i++;    
         }
     }
+    printf("Armazenado com sucessso. \n");
+    
     fclose(input_file);
+}
 }
 
 void storeinfilemob(Mobilidade array[]){
-
-    int i=0;
     FILE *input_file;
     input_file = fopen("mobilidadeafter.txt", "wt");
     if (input_file == NULL) {
@@ -202,13 +202,59 @@ void storeinfilemob(Mobilidade array[]){
         exit(1);
     }
     else {
-        while (feof(input_file)) {
+        for (int i=0; array[i].custo !=-1; i++){ 
             fprintf(input_file, "%s ", array[i].codigomobi);
             fprintf(input_file, "%s ", array[i].tipo);
-            fprintf(input_file, "%f ", array[i].custo);
+            fprintf(input_file, "%.2f ", array[i].custo);
             fprintf(input_file, "%d\n", array[i].autonomia);
-            i++;
+        }
+        }
+   
+    printf("Armazenado com sucessso. \n");
+
+    fclose(input_file);
+}
+
+void deletemob(Mobilidade array[]){
+    char codigo[TAMANHOSTR];
+
+    printf("Insira o codigo da mobilidade : \n");
+    scanf("%s", codigo);
+
+    for (int i=0; array[i].custo != -1 ;i++) {
+        if (strcmp(array[i].codigomobi, codigo) == 0 && array[i].custo != -1) {
+                for (int j=i ; j< TAMANHOARR-1; j++) {
+                /*strcpy(array[j].codigomobi, array[j+1].codigomobi);
+                strcpy(array[j].tipo, array[j+1].tipo);
+                array[j].custo = array[j+1].custo;
+                array[j].autonomia = array[j+1].autonomia;
+                    */
+                array[j] = array[j+1];
+                }
+                break;
+            
+            }
+        }
+}
+void deleteped(Pedido array[]){
+    char codigo[TAMANHOSTR];
+
+    printf("Insira o codigo dos pedidos : \n");
+    scanf("%s", codigo);
+    for (int i=0; array[i].ordem != -1; i++) { 
+        if (strcmp(array[i].codigoped, codigo) == 0 && array[i].ordem != -1 ) {
+            for (int j=i; j< TAMANHOARR-1; j++) {
+                array[j] = array[j+1];
+            }
         }
     }
-    fclose(input_file);
+
+}
+
+
+
+void clearscreen(){
+
+    system("clear");
+
 }

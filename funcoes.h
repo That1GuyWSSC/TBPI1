@@ -21,3 +21,6 @@ extern void printartudoPedido(Pedido array[]);
 extern void printartudoMob(Mobilidade array[]);
 extern void storeinfileped(Pedido array[]);
 extern void storeinfilemob(Mobilidade array[]);
+extern void deletemob(Mobilidade array[]);
+extern void clearscreen();
+extern void deleteped(Pedido array[]);
