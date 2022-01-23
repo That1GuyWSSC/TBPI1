@@ -10,37 +10,29 @@
  * @copyright Copyright (c) 2022
  * 
  */
+#include <stdio.h>
 #include "structs.h"
 #include "funcoes.h"
 #include <stdlib.h>
-#include "string.h"
+#include <string.h>
 
 
-
+/**
+ * @brief Funcao que corre o programa
+ * 
+ * @return int 
+ */
 int main(void){
 int opcao, i, nif, tempo, distancia, ordem;
 int  custo, autonomia;
+int index;
 char codigo[TAMANHOSTR];
 char tipo[TAMANHOSTR];
 
     Pedido array[TAMANHOARR];
-    for (i=0; i<TAMANHOARR; i++) {
-        array[i].ordem = -1;
-        array[i].nif = -1;
-        array[i].tempo= -1;
-        array[i].distancia= -1;
-        strcpy(array[i].codigoped, "");
-
-    }
+    preencherPed(array);
     Mobilidade array2[TAMANHOARR];
-        for (i=0; i<TAMANHOARR; i++) {
-        strcpy(array2[i].codigomobi, "");
-        strcpy(array2[i].tipo, "");
-        array2[i].custo = -1;
-        array2[i].autonomia = -1;
-        }
-    int index;
-
+    preencherMob(array2);
     do {
           opcao = menu();
     switch (opcao) {
@@ -90,6 +82,7 @@ char tipo[TAMANHOSTR];
     case 13: storeinfilemob(array2);
             break;
     case 14: clearscreen();
+            break;
 
     default:
         printf("Ocorreu um erro.");

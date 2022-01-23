@@ -11,19 +11,31 @@
  * 
  */
 
+#define TAMANHOARR 100
+#define TAMANHOSTR 20
+
+
+/**
+ * @brief Struct que representa um meio de mobilidade eletrica
+ * 
+ */
 typedef struct 
 {
-    char codigomobi[100];
-    char tipo[100];
+    char codigomobi[TAMANHOSTR];
+    char tipo[TAMANHOSTR];
     float custo;
     int autonomia;
 }Mobilidade;
 
+/**
+ * @brief Struct que representa os varios pedidos dos utilizadores
+ * 
+ */
 typedef struct 
 {
     int ordem;
     int nif;
-    char codigoped[100];
+    char codigoped[TAMANHOSTR];
     int tempo;
     int distancia;
 }Pedido;

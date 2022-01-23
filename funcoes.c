@@ -18,10 +18,10 @@
 #include <stdlib.h>
 
 /**
- * @brief 
+ * @brief Funcao que passa por argumentos todos os elementos necessarios para inserir um novo elemento no array de structs de Pedido
  * 
- * @param array 
- * @param index 
+ * @param array array da struct Pedido
+ * @param index index do array 
  * @param ordem 
  * @param nif 
  * @param codigo 
@@ -51,12 +51,21 @@ int insertPedido(Pedido array[],int index, int ordem, int nif, char *codigo, int
     return 0;
 }    
 
-
+/**
+ * @brief funcao que escreve na consola um elemento do array 
+ * 
+ * @param array array da struct do Pedido
+ * @param i 
+ */
 void printarrayped(Pedido array[], int i)
 {
     printf("%d %d %s %d %d \n", array[i].ordem, array[i].nif, array[i].codigoped, array[i].tempo, array[i].distancia);
 }
-
+/**
+ * @brief Funcao que le os dados do ficheiro "pedidos" e insere os valores obtidos num array dos registos e escreve na consola para confirmar os valores
+ * 
+ * @param array array da struct do Pedido 
+ */
 void readfromfileinsertPedido(Pedido array[]){
     FILE *input_file;
     int ordem , nif , tempo , distancia;
@@ -84,7 +93,10 @@ void readfromfileinsertPedido(Pedido array[]){
     fclose(input_file);
     
 }
-
+/**
+ * @brief Funcao que pode vir a ser utilizada para verificar a existencia de um elemento do array 
+ * 
+ */
 /*int existePedido(Pedido array[], int index, int ordem){
     for (int i = 0; i < index; i++)
     {
@@ -95,6 +107,17 @@ void readfromfileinsertPedido(Pedido array[]){
 }
 */
 
+/**
+ * @brief Funcao que passa por argumentos todos os valores necessarios para preencher o elemento da struct da mobilidade 
+ * 
+ * @param array array da struct da Mobilidade
+ * @param index 
+ * @param codigo 
+ * @param tipo 
+ * @param custo 
+ * @param autonomia 
+ * @return int 
+ */
 int insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, float custo, int autonomia)
 {
     if (index < TAMANHOARR) {
@@ -106,12 +129,21 @@ int insertMobilidade(Mobilidade array[], int index, char *codigo, char *tipo, fl
     }
     return 0;
     }
-
+/**
+ * @brief Funcao que escreve na consola um elemento de um certo index do array
+ * 
+ * @param array array da struct de Mobilidade
+ * @param i 
+ */
 void printarrayMobilidade(Mobilidade array[], int i)
 {
     printf("%s %s %.2f %d \n", array[i].codigomobi,array[i].tipo,array[i].custo,array[i].autonomia);
 }
-
+/**
+ * @brief Funcao que escreve na consola todos os elementos do array
+ * 
+ * @param array array da struct de Mobilidade
+ */
 void printartudoMob(Mobilidade array[]){
 
     for (int i=0; array[i].custo != -1; i++) {
@@ -125,7 +157,11 @@ void printartudoMob(Mobilidade array[]){
     }
 
 }
-
+/**
+ * @brief Funcao que le os dados do ficheiro de mobilidades e insere os dados num array de registos da struct, escreve tambem na consola para verificar se os elementos passados foram os corretos
+ * 
+ * @param array array da struct de Mobilidade
+ */
 void readfromfileinsertMobilidade(Mobilidade array[]){
 
     char codigo[TAMANHOSTR];
@@ -155,7 +191,11 @@ void readfromfileinsertMobilidade(Mobilidade array[]){
     fclose(input_file);
 }
 
-
+/**
+ * @brief Funcao utilizada para escrever na consola o nosso menu (apresenta todas as opcoes disponiveis para o utilizador usar)
+ * 
+ * @return int <- a opcao inserida pelo o utilizador
+ */
 int menu(){
     int opcao;
     printf("\n");
@@ -177,7 +217,11 @@ int menu(){
 
 return (opcao);
 }
-
+/**
+ * @brief Funcao que escreve na consola todos os elementos do array de registos de uma struct
+ * 
+ * @param array array da struct dos Pedidos
+ */
 void printartudoPedido(Pedido array[]){
 
     //readfromfileinsertPedido(array);
@@ -195,6 +239,11 @@ void printartudoPedido(Pedido array[]){
 
 }
 
+/**
+ * @brief Funcao usada no final do programa para escrever todos os elementos do array de registo de pedidos, para um outro ficheiro 
+ * 
+ * @param array arrat da struct dos Pedidos
+ */
 void storeinfileped(Pedido array[]){
     FILE *input_file;
     input_file = fopen("pedidosafter.txt", "wt");
@@ -216,7 +265,11 @@ void storeinfileped(Pedido array[]){
     fclose(input_file);
 }
 }
-
+/**
+ * @brief Funcao utilizada no final do programa para escrever num ficheiro todos os elementos do array de registos da struct especifica, para um outro ficheiro
+ * 
+ * @param array array da struct da Mobilidade
+ */
 void storeinfilemob(Mobilidade array[]){
     FILE *input_file;
     input_file = fopen("mobilidadeafter.txt", "wt");
@@ -237,7 +290,11 @@ void storeinfilemob(Mobilidade array[]){
 
     fclose(input_file);
 }
-
+/**
+ * @brief Funcao que apaga elementos do array utilizando o codigo dos elementos como parametro para apagar
+ * 
+ * @param array array da struct de Mobilidade
+ */
 void deletemob(Mobilidade array[]){
     char codigo[TAMANHOSTR];
 
@@ -259,6 +316,11 @@ void deletemob(Mobilidade array[]){
             }
         }
 }
+/**
+ * @brief Funcao que apaga todos os elementos do array de registo, se o codigo fornececido for igual a um dos elementos
+ * 
+ * @param array array da struct de Pedido
+ */
 void deleteped(Pedido array[]){
     char codigo[TAMANHOSTR];
 
@@ -275,9 +337,45 @@ void deleteped(Pedido array[]){
 }
 
 
-
+/**
+ * @brief Funcao utilizada para a limpeza do ecra, para melhor a visibilidade do menu
+    Funciona so em Linux
+ * 
+ */
 void clearscreen(){
 
     system("clear");
+
+}
+/**
+ * @brief funcao que preenche o array com -1 nos numeros e espacos nos chars
+ * 
+ * @param array array de pedidos
+ */
+void preencherPed(Pedido array[]){
+    
+    for (int i=0; i<TAMANHOARR; i++) {
+        array[i].ordem = -1;
+        array[i].nif = -1;
+        array[i].tempo= -1;
+        array[i].distancia= -1;
+        strcpy(array[i].codigoped, "");
+
+    }
+
+}
+/**
+ * @brief funcao que preenche o array com -1 nos numeros e espacos nos chars
+ * 
+ * @param array array de mobilidade
+ */
+void preencherMob(Mobilidade array[]){
+
+    for (int i=0; i<TAMANHOARR; i++) {
+        strcpy(array[i].codigomobi, "");
+        strcpy(array[i].tipo, "");
+        array[i].custo = -1;
+        array[i].autonomia = -1;
+        }
 
 }
