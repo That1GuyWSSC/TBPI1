@@ -65,7 +65,7 @@ char tipo[TAMANHOSTR];
             scanf("%d", &tempo);
             printf("Insira a distancia\n");
             scanf("%d", &distancia);
-            printf("%d %d %s %d %d index : %d ", ordem, nif, codigo, tempo,distancia, i);
+            //printf("%d %d %s %d %d index : %d ", ordem, nif, codigo, tempo,distancia, i);
             insertPedido(array,i, ordem, nif, codigo, tempo, distancia);
             break;
     case 6 : deleteped(array);

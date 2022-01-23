@@ -199,20 +199,20 @@ void readfromfileinsertMobilidade(Mobilidade array[]){
 int menu(){
     int opcao;
     printf("\n");
-    printf("**********************MENU***********************************\n");
-    printf("*\t1- Ler o ficheiro de pedidos                         *\n");
-    printf("*\t2- Ler o ficheiro de meio de mobilidade              *\n");
-    printf("*\t3- Inserir um novo meio de mobilidade                *\n");
-    printf("*\t4- Remover um meio de mobilidade                     *\n");
-    printf("*\t5- Inserir novo Pedido                               *\n");
-    printf("*\t6- Remover um Pedido                                 *\n");
-    printf("*\t7- Listar todos os meios de mobilidades              *\n");
-    printf("*\t8- Listar todos os pedidos                           *\n");
-    printf("*\t9- Cálculo do custo associado a um pedido de utilização a partir da indicação do seu número de ordem *\n");
-    printf("*\t12- Armazenar os pedidos em file                     *\n");
-    printf("*\t13- Armazenar as mobilidades em file                 *\n");
-    printf("*\t14- Clear ao ecra                                    *\n");
-    printf("*************************************************************\n");
+    printf("**********************MENU*********************************************\n");
+    printf("*\t1- Ler o ficheiro de pedidos                                  *\n");
+    printf("*\t2- Ler o ficheiro de meio de mobilidade                       *\n");
+    printf("*\t3- Inserir um novo meio de mobilidade                         *\n");
+    printf("*\t4- Remover um meio de mobilidade                              *\n");
+    printf("*\t5- Inserir novo Pedido                                        *\n");
+    printf("*\t6- Remover um Pedido                                          *\n");
+    printf("*\t7- Listar todos os meios de mobilidades                       *\n");
+    printf("*\t8- Listar todos os pedidos                                    *\n");
+    printf("*\t9- Cálculo do custo ligado a um pedido do seu número de ordem *\n");
+    printf("*\t12- Armazenar os pedidos em file                              *\n");
+    printf("*\t13- Armazenar as mobilidades em file                          *\n");
+    printf("*\t14- Clear ao ecra                                             *\n");
+    printf("***********************************************************************\n");
     printf("Escreva o numero da opcao desejada.\n");
     scanf("%d", &opcao);
 
