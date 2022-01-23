@@ -1,3 +1,15 @@
+/**
+ * @file funcoes.c
+ * @author Joao Machado
+ * @author Diogo Espirito Santo
+ * @author Tiago Fernandes
+ * @brief Ficheiro que contem as funcoes do programa.
+ * @version 0.1
+ * @date 2022-01-23
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 
 #include <stdio.h>
 #include "structs.h"
@@ -5,7 +17,18 @@
 #include "funcoes.h"
 #include <stdlib.h>
 
-
+/**
+ * @brief 
+ * 
+ * @param array 
+ * @param index 
+ * @param ordem 
+ * @param nif 
+ * @param codigo 
+ * @param tempo 
+ * @param distancia 
+ * @return int 
+ */
 int insertPedido(Pedido array[],int index, int ordem, int nif, char *codigo, int tempo, int distancia){
 /*    if(existePedido(array, index, ordem) == 1) 
     {

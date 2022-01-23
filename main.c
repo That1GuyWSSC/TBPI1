@@ -1,4 +1,15 @@
-#include <stdio.h>
+/**
+ * @file main.c
+ * @author Joao Machado
+ * @author Diogo Espirito Santo
+ * @author Tiago Fernandes
+ * @brief Ficheiro principal do programa, onde e executando
+ * @version 0.1
+ * @date 2022-01-23
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "structs.h"
 #include "funcoes.h"
 #include <stdlib.h>
